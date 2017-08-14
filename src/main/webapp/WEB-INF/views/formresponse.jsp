@@ -4,8 +4,8 @@
     <title>Thank you!</title>
 </head>
 <body>
-Thank you for submitting your info! <br>
-${name}<br>
-${email}<br>
+Thank you for submitting your info, ${name}! <br>
+Username: ${username}<br>
+Password: ${password}<br>
 </body>
 </html>
