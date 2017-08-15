@@ -1,11 +1,16 @@
 package com.test.util;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Controller
@@ -14,9 +19,47 @@ public class HomeController {
     @RequestMapping("/")
 
     public ModelAndView helloWorld() {
-        return new
-                ModelAndView("welcome","message","Hello World");
+        //define data for the connection
+        String dbAddress = "jdbc:mysql://localhost:3306/CoffeeShopDB";
+        String username = "root";
+        String password = "Sunshine17!";
+
+        //load the driver
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //create the db connection object
+            Connection mysqlConnection;
+            mysqlConnection = DriverManager.getConnection(dbAddress, username,password);
+
+            //create the db statement
+
+            String readItemsCommand = "select name, description, quantity, price from items";
+
+            Statement readItems = mysqlConnection.createStatement(); //creates the statement
+
+            ResultSet results = readItems.executeQuery(readItemsCommand); //executes the statement
+
+            //ArrayList of items
+            ArrayList<Items> itemList = new ArrayList<Items>();
+
+            //map from ResultSet to the ArrayList
+            while(results.next()){
+
+                Items temp = new Items (results.getString(1),
+                        results.getString(2), results.getInt(3), results.getFloat(4));
+
+                //add object to the Arraylist
+                itemList.add(temp);
+            }
+            return new ModelAndView("welcome","itList", itemList);
+        }
+        catch (Exception ex){
+
+        }
+        return null;
     }
+
 
     @RequestMapping("/userform")
     public ModelAndView userform(){
@@ -41,5 +84,6 @@ public class HomeController {
 
         return mv;
     }
+
 
 }

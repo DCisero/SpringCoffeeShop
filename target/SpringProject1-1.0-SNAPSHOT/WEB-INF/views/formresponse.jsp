@@ -5,7 +5,7 @@
 </head>
 <body>
 Thank you for submitting your info, ${name}! <br>
-New Username: ${username}<br>
+Username: ${username}<br>
 Password: ${password}<br>
 </body>
 </html>
