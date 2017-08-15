@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>User Form</title>
+    <link href=".css" rel="stylesheet">
 
     <script language="JavaScript">
         function validate(){

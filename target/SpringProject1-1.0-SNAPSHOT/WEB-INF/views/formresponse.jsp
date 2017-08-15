@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Thank you!</title>
+    <link href=".css" rel="stylesheet">
 </head>
 <body>
 Thank you for submitting your info, ${name}! <br>

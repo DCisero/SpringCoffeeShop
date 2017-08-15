@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Welcome!</title>
-    <link href="/resources/cssstylesheet.css" rel="stylesheet">
+    <link href=".css" rel="stylesheet">
 </head>
 
 <body>
