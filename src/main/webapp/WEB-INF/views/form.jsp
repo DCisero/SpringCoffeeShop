@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>User Form</title>
-    <link href=".css" rel="stylesheet">
+    <link rel="stylesheet" href="/resources/style.css">
 
     <script language="JavaScript">
         function validate(){
@@ -39,12 +39,12 @@
 <body>
 ${inst}
 
-<form action="formhandler" method="post">
-    Full Name: <input type="text" name="name" ><br>
-    Birthday: <input type="number" name="bday"><br>
-    Email: <input type="text" name="email" maxlength="25" placeholder="name@email.com"><br>
-    User Name: <input type="text" name="username"> <br>
-    Password: <input type="password" name="password" maxlength="25"><br>
+<form action="addUser" method="post">
+    First Name: <input type="text" name="FirstName" ><br>
+    Birthday: <input type="number" name="Birthday"><br>
+    Email: <input type="text" name="Email" maxlength="25" placeholder="name@email.com"><br>
+    User Name: <input type="text" name="UserName"> <br>
+    Password: <input type="password" name="Password" maxlength="25"><br>
 
     <input type="submit" name="submit" value="Submit">
 </form>

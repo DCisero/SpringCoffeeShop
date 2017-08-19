@@ -1,12 +1,20 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Thank you!</title>
+    <title>User Added</title>
     <link rel="stylesheet" href="/resources/style.css">
+
 </head>
 <body>
-<p2>Thank you for submitting your info, ${name}!</p2> <br>
-<div1>Username: ${username}</div1><br>
-<div2>Password: ${password}</div2><br>
+Added New Dreamer:<br/>
+
+${FirstName}<br/>
+${Birthday}<br/>
+${Email}<br/>
+${UserName}<br/>
+${Password}<br/>
+
 </body>
 </html>
+

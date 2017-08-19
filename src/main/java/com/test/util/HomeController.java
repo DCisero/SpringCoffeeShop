@@ -1,6 +1,7 @@
 package com.test.util;
 
 
+import model.DAO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,8 +22,8 @@ public class HomeController {
     public ModelAndView helloWorld() {
         //define data for the connection
         String dbAddress = "jdbc:mysql://localhost:3306/CoffeeShopDB";
-        String username = "root";
-        String password = "Sunshine17!";
+        String username = "guest";
+        String password = "Techlover17";
 
         //load the driver
         try {
@@ -85,5 +86,31 @@ public class HomeController {
         return mv;
     }
 
+    @RequestMapping(value = "/addUser")
+    public ModelAndView addUser (
+            @RequestParam("FirstName") String FirstName,
+            @RequestParam("Birthday") int Birthday,
+            @RequestParam("Email") String Email,
+            @RequestParam("UserName") String UserName,
+            @RequestParam("Password") String Password)
+    {
 
+        //add the info to DB through DAO
+       boolean result = DAO.addUsers(FirstName,Birthday,Email,UserName,Password);
+
+       if (result == false) {
+        //still have to write this view
+        return new ModelAndView("error", "errmsg", "user add failed");
+    }
+
+
+        ModelAndView mv = new ModelAndView("addresult");
+        mv.addObject("FirstName", FirstName);
+        mv.addObject("Birthday", Birthday);
+        mv.addObject("Email", Email);
+        mv.addObject("UserName", UserName);
+        mv.addObject("Password", Password);
+
+        return mv;
+    }
 }

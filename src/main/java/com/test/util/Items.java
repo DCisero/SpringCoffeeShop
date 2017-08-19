@@ -11,7 +11,7 @@ public class Items {
         name = "";
         description = "";
         quantity = 0;
-        price = 0;
+        price = 0.0f;
     }
     public Items (String itName, String itDescipt, int itQuan, float itPri) {
         name = itName;
@@ -21,32 +21,40 @@ public class Items {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String Name) {
+
         this.name = Name;
     }
     public String getDescription() {
+
         return description;
     }
 
     public void setDescription(String Desciption) {
+
         this.description = Desciption;
     }
 
     public int getQuantity() {
+
         return quantity;
     }
 
     public void setQuantity(int Quantity) {
+
         this.quantity = Quantity;
     }
     public float getPrice() {
+
         return price;
     }
 
     public void setPrice(float Price) {
+
         this.price = Price;
     }
 

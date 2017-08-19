@@ -4,20 +4,20 @@
 <html>
 <head>
     <title>Welcome!</title>
-    <link href=".css" rel="stylesheet">
+    <link rel="stylesheet" href="/resources/style.css">
 </head>
 
 <body>
-<h1>Welcome to Dreamy Delight Coffee!</h1>
+<h1>Dreamy Delight Cafe!</h1>
 <br/>
-Welcome new <i>Dreamers</i>, please fill out a registry form:
-<a href="userform">Register</a> <br>
-<img src="https://cdn.theculturetrip.com/wp-content/uploads/2015/12/24446651320_aa7abf37ca_k.jpg"
-     alt="coffee" height="300" width="400"> <br>
+<p>Welcome new <i>Dreamers</i>, please fill out a registry form: <a href="userform"> Register</a></p>
+
+<!--<<img src="https://cdn.theculturetrip.com/wp-content/uploads/2015/12/24446651320_aa7abf37ca_k.jpg"
+     alt="coffee" height="300" width="400">-->
 
 <h2>Dreamy Delight Menu:</h2>
 
-<table border="2">
+<table align="center" border="2">
     <tr>
         <th>Item Name</th>
         <th>Description</th>

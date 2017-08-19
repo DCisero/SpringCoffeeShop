@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Thank you!</title>
-    <link href=".css" rel="stylesheet">
+    <link rel="stylesheet" href="/resources/style.css">
 </head>
 <body>
-Thank you for submitting your info, ${name}! <br>
-Username: ${username}<br>
-Password: ${password}<br>
+<p2>Thank you for submitting your info, ${name}!</p2> <br>
+<div1>Username: ${username}</div1><br>
+<div2>Password: ${password}</div2><br>
 </body>
 </html>

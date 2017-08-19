@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+body{
+    background-color: whitesmoke;
+    background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2015/12/24446651320_aa7abf37ca_k.jpg");
+    background-position: center;
+    color: gold;
+
+}
+
+
+h1{
+    font-family: 'Playfair Display', serif;
+    color: teal;
+    text-align: center;
+    font-size: 50px;
+    background-color: whitesmoke;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    color: teal;
+    text-align: center;
+    font-size: 40px;
+}
+
+p{
+    font-family: 'Playfair Display', serif;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+}
+
+a{
+    font-family: 'Playfair Display', serif;
+    color: gold;
+    font-size: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    border-width: medium;
+    width: 60%;
+    background-color:whitesmoke;
+}
+
+td {
+    text-align: left;
+    padding: 20px;
+    color: teal;
+    font-size: 15px;
+}
+
+th {
+    background-color: silver;
+    color: gold;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+p2{
+    color:gold;
+    font-size: 30px;
+    text-align: center;
+}
+
+form{
+    font-size: 25px;
+    color: black;
+}
+
+div1, div2{
+  font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+}
